@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* Reset some defaults */
 * {
     margin: 0;
@@ -26,11 +29,6 @@
     list-style: none;
   }
   
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
   main {
     max-width: 800px;
     margin: 2rem auto;
@@ -42,20 +40,51 @@
     font-size: 0.9rem;
   }
 
-  .hightlights {
+  .highlights {
     padding: 0.2rem;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    padding: 20px;
   }
-
+  
+  .highlight-card {
+    background-color: #dadada; /*gives a light background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%; /* adjust this depending on spacing/gap */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*oft shadow */
+  }
   
   /* Headers, Titles & Text */
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   .hero {
     text-align: center;
     padding: 0.6rem
   }
 
+  .main-title{
+    font-family: "Winky Rough", sans-serif;
+    font-size: 2rem;
+  }
+
+  .highlights-title {
+    text-align: center;
+  }
+
   .sub-title {
     font-weight: 600;
+  }
+
+  p {
+    font-family: "Special Gothic", sans-serif;
   }
 
   /* Responsive tweaks */
@@ -74,3 +103,8 @@
       }
   }
   
+  @media (max-width: 900px) {
+    .highlight-card {
+      width: 100%; /* stack on smaller screens */
+    }
+  }
