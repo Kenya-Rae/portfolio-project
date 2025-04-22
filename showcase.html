@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kenya-Rae | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
   <header>
@@ -21,22 +23,63 @@
   </header>
 
   <main>
-    <section class="showcase">
-        <h2 class="main-title">Showcase</h2>
-        <div class="highlight-card" id="recipe-blog">
-            <h3>Responsive Recipe Blog</h3>
-            <p>A clean, mobile-first recipe blog made with HTML, CSS & JS.</p>
-        </div>
+    <h2 class="main-title">Showcase</h2>
 
-        <div class="highlight-card" id="gaming-clips">
-            <h3>Gaming Clips Edits</h3>
-            <p>Memes, music, and high-energy cuts made using CapCut.</p>
+    <!-- Web Development Showcase -->
+    <section class="showcase web-dev" id="web-dev">
+      <h3>Web Development</h3>
+      <div class="card-container">
+        <div class="card">
+          <img src="assets/media/images/mani-and-me.png" alt="Screenshot of Mani & Me e-commerce site">
+          <h4>Mani & Me</h4>
+          <p>An e-commerce site built using Node.js, Express, Handlebars, and Sequelize. Designed for a real small
+            business selling handmade beauty products, with a cart system, user auth, and product listings.</p>
+          <a href="https://mani-and-me-3a77440a82f2.herokuapp.com/" target="_blank">View Project</a>
         </div>
+        <div class="card">
+          <img src="assets/media/images/sequence-square-game.png" alt="Screenshot of Sequence Square game">
+          <h4>Sequence Square Game</h4>
+          <p>A fun, browser-based memory game created with HTML, CSS, and JavaScript. Players watch and repeat growing
+            tile sequences — perfect for practicing logic and speed.</p>
+          <a href="https://kenya-rae.github.io/sequence-square-game/" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
 
-        <div class="highlight-card" id="baking-clips">
-            <h3>Baking & Cooking Creative Meals</h3>
-            <p>Using my imagination to create delicious bites.</p>
+
+    <!-- Gaming Edits Showcase -->
+    <section class="showcase gaming-edits" id="gaming-edits">
+      <h3>Gaming Clip Edits</h3>
+      <div class="card-container">
+        <div class="card">
+          <video src="videos/edit1.mp4" controls></video>
+          <h4>Funny Clip #1</h4>
+          <p>Edited using CapCut with meme audio + transitions.</p>
         </div>
+        <div class="card">
+          <video src="assets/media/video/clip1.mp4" controls></video>
+          <h4>Clutch Moment</h4>
+          <p>Clutching wins and showcasing basic editing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food & Baking Showcase -->
+    <section class="showcase food" id="food">
+      <h3>Baking & Cooking</h3>
+      <div class="card-container">
+        <div class="card">
+          <img src="images/cookies.jpg" alt="Chocolate chip cookies">
+          <h4>Chunky Chocolate Cookies</h4>
+          <p>Soft and gooey with a crispy edge – a big hit on Instagram!</p>
+        </div>
+        <div class="card">
+          <img src="images/noodles.jpg" alt="Noodle dish">
+          <h4>Spicy Stir-Fry Noodles</h4>
+          <p>Quick, flavour-packed meal made from scratch in 10 minutes.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -44,4 +87,5 @@
   </footer>
 
 </body>
+
 </html>

@@ -3,123 +3,168 @@
 
 /* Reset some defaults */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 1rem;
-  }
-  
-  /* Layout */
-  header, footer {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Layout */
+header,
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+.highlights {
+  padding: 0.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* allows wrapping on smaller screens */
+  padding: 20px;
+}
+
+.highlight-card {
+  background-color: #dadada;
+  /*gives a light background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  /* adjust this depending on spacing/gap */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /*oft shadow */
+}
+
+.about-me-paragraph p {
+  margin-bottom: 1.2rem;
+  /* Adjust spacing as you like */
+  line-height: 1.6;
+}
+
+.facts-about-me {
+  padding-top: 0.7rem;
+}
+
+.facts-about-me ul {
+  padding-top: 0.7rem;
+  list-style: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img,
+.card video {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card h3 {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+}
+
+/* Headers, Titles & Text */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 0.6rem
+}
+
+.main-title, .logo {
+  font-family: "Winky Rough", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.highlights-title {
+  text-align: center;
+}
+
+.sub-title {
+  font-weight: 600;
+}
+
+p {
+  font-family: "Special Gothic", sans-serif;
+}
+
+.showcase h3 {
+  padding: 0.7rem;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
   .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    list-style: none;
+    gap: 2rem;
   }
-  
+
   main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
-  
-  footer {
-    margin-top: 4rem;
-    font-size: 0.9rem;
-  }
-
-  .highlights {
-    padding: 0.2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* allows wrapping on smaller screens */
-    padding: 20px;
-  }
-  
-  .highlight-card {
-    background-color: #dadada; /*gives a light background */
-    padding: 20px;
-    border-radius: 8px;
-    width: 30%; /* adjust this depending on spacing/gap */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*oft shadow */
-  }
-  
-  .about-me-paragraph p {
-    margin-bottom: 1.2rem; /* Adjust spacing as you like */
-    line-height: 1.6;
-  }
-
-  .facts-about-me{
-    padding-top: 0.7rem;
-  }
-
-  .facts-about-me ul{
-    padding-top: 0.7rem;
-    list-style: none;
-  }
-  
-  /* Headers, Titles & Text */
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
+    padding: 2rem;
   }
 
   .hero {
     text-align: center;
-    padding: 0.6rem
+    padding: 2rem;
   }
 
-  .main-title{
-    font-family: "Winky Rough", sans-serif;
-    font-size: 2rem;
-    text-align: center;
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  .highlights-title {
-    text-align: center;
+  .card {
+    flex: 0 1 48%;
   }
+}
 
-  .sub-title {
-    font-weight: 600;
+@media (max-width: 900px) {
+  .highlight-card {
+    width: 100%;
+    /* stack on smaller screens */
   }
-
-  p {
-    font-family: "Special Gothic", sans-serif;
-  }
-
-  /* Responsive tweaks */
-  @media (min-width: 768px) {
-    .nav-links {
-      gap: 2rem;
-    }
-  
-    main {
-      padding: 2rem;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 2rem;
-      }
-  }
-  
-  @media (max-width: 900px) {
-    .highlight-card {
-      width: 100%; /* stack on smaller screens */
-    }
-  }
+}
