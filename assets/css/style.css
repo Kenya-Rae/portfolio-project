@@ -59,6 +59,20 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*oft shadow */
   }
   
+  .about-me-paragraph p {
+    margin-bottom: 1.2rem; /* Adjust spacing as you like */
+    line-height: 1.6;
+  }
+
+  .facts-about-me{
+    padding-top: 0.7rem;
+  }
+
+  .facts-about-me ul{
+    padding-top: 0.7rem;
+    list-style: none;
+  }
+  
   /* Headers, Titles & Text */
   .nav-links a {
     color: #fff;
@@ -73,6 +87,7 @@
   .main-title{
     font-family: "Winky Rough", sans-serif;
     font-size: 2rem;
+    text-align: center;
   }
 
   .highlights-title {
