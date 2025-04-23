@@ -12,7 +12,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 1rem;
-  cursor: url('assets/cursors/k.cur') 16 16, auto;
+  cursor: url('/assets/css/cursors/k_resized_32x32.png'), auto;
 }
 
 /* Layout */
