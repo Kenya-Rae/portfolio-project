@@ -12,6 +12,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 1rem;
+  cursor: url('assets/cursors/k.cur') 16 16, auto;
 }
 
 /* Layout */
@@ -42,7 +43,7 @@ footer {
 }
 
 footer a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .fa-brands {
@@ -70,19 +71,113 @@ footer a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.about-me-paragraph {
+  background-color: #f7f7f7;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
 .about-me-paragraph p {
   margin-bottom: 1.2rem;
   line-height: 1.6;
 }
 
-.facts-about-me {
-  padding-top: 0.7rem;
+/* --- GET TO KNOW ME SECTION --- */
+.get-to-know-me {
+  padding-top: 1.2rem;
 }
 
-.facts-about-me ul {
-  padding-top: 0.7rem;
-  list-style: none;
+.fact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
 }
+
+.fact-cards .card {
+  background-color: #fefefe;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Special Gothic", sans-serif;
+}
+
+.fact-cards .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.fact-cards .card i {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.fact-cards .card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card i {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Tooltip on hover for the icon */
+.card i:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 1;
+  pointer-events: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: opacity 0.3s ease, top 0.3s ease; /* smooth transition for tooltip */
+}
+
+/* Icon hover animation and glow effect */
+.card i {
+  position: relative; /* Needed for the tooltip to align properly */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card i:hover {
+  animation: bounce 0.6s ease forwards;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.534));  /* Glow effect */
+}
+
+/* Bounce effect for the icon */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------- */
 
 .card-container {
   display: grid;
@@ -95,7 +190,7 @@ footer a {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex; /* Make content fill vertical space */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -114,7 +209,7 @@ footer a {
 
 .food-img {
   width: 100%;
-  height: 200px; /* force same height across cards */
+  height: 200px;
   object-fit: cover;
   border-radius: 0.5rem;
   display: block;
@@ -128,7 +223,7 @@ footer a {
 
 .hero {
   text-align: center;
-  padding: 0.6rem
+  padding: 0.6rem;
 }
 
 .main-title, .logo {
@@ -147,10 +242,6 @@ footer a {
 
 p {
   font-family: "Special Gothic", sans-serif;
-}
-
-.showcase h3 {
-  padding: 0.7rem;
 }
 
 /* Responsive tweaks */
