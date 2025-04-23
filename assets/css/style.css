@@ -15,6 +15,24 @@ body {
   cursor: url('/assets/css/cursors/k_resized_32x32.png'), auto;
 }
 
+/* Dark/Light Mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-bg: #ffffff;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #050404;
+  --card-bg: #1e1e1e;
+}
+
 /* Layout */
 header,
 footer {
