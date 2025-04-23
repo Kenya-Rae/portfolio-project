@@ -41,6 +41,16 @@ footer {
   font-size: 0.9rem;
 }
 
+footer a {
+  text-decoration: none
+}
+
+.fa-brands {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}
+
 .highlights {
   padding: 0.2rem;
   text-align: center;
@@ -49,24 +59,19 @@ footer {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  /* allows wrapping on smaller screens */
   padding: 20px;
 }
 
 .highlight-card {
   background-color: #dadada;
-  /*gives a light background */
   padding: 20px;
   border-radius: 8px;
   width: 30%;
-  /* adjust this depending on spacing/gap */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /*oft shadow */
 }
 
 .about-me-paragraph p {
   margin-bottom: 1.2rem;
-  /* Adjust spacing as you like */
   line-height: 1.6;
 }
 
@@ -80,9 +85,9 @@ footer {
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
 
 .card {
@@ -90,8 +95,12 @@ footer {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Make content fill vertical space */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Maintain consistent media scaling */
 .card img,
 .card video {
   width: 100%;
@@ -101,6 +110,14 @@ footer {
 .card h3 {
   margin-top: 0.8rem;
   font-size: 1.2rem;
+}
+
+.food-img {
+  width: 100%;
+  height: 200px; /* force same height across cards */
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
 }
 
 /* Headers, Titles & Text */
@@ -152,19 +169,20 @@ p {
   }
 
   .card-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .card {
-    flex: 0 1 48%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 900px) {
   .highlight-card {
     width: 100%;
-    /* stack on smaller screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
